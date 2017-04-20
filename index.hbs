@@ -4,6 +4,18 @@
     
     {{#is "home"}}
 
+    {{#contentFor "meta"}}
+    <meta property="og:url" content="{{@blog.url}}" />
+    <meta property="og:title" content="Blog TAB University - Comunidad de Alto Desempeño" />
+    <meta property="og:site_name" content="{{@blog.title}}" />
+    <meta property="og:image" content="http://i.imgur.com/2W24GAF.jpg" />
+    <meta property="og:description" content="Experiencias y consejos que te permiten encontrar tu mejor versión profesional."/>
+    <meta property="fb:profile_id" content="mikenieva" />
+    <meta property="fb:admins" content="mikenieva" />
+    <meta property="fb:pages" content="285521064948889" />
+    {{/contentFor}}
+
+
     {{#get "posts" include="tags" filter="featured:true" as |featured|}}
     <div class="flexslider">
         <ul class="slides">

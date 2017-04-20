@@ -381,7 +381,7 @@ input[type='submit']{
 
     .blog-logo{
         float: left;
-        height: 30px;
+        height: 40px;
         margin: 14px 0;
     }
 
@@ -787,7 +787,7 @@ input[type='submit']{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(61,201,179, 0.8);
+    background-color: rgba(57, 115, 184, .8);
     opacity: 0;
     z-index: 200;
     -webkit-transition: opacity 0.3s linear;
@@ -961,7 +961,7 @@ input[type='submit']{
     }
 
     .nav-current a{
-        border-bottom: 2px solid $primary-color;
+        border-bottom: 2px solid #ffffff;
         padding-bottom: 5px;
     }
 
