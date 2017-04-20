@@ -7,7 +7,7 @@
     {{#post}}
 
         {{#contentFor "meta"}}
-            {{#is "author"}}<meta property="og:title" content="{{title}} - {{name}}" />{{/is}}
+            {{#is "author"}}<meta property="og:title" content="{{title}} - {{author}}" />{{/is}}
             <meta property="og:site_name" content="{{@blog.title}}" />
             <meta property="og:description" content="{{meta_description}}"/>
             <meta property="og:image" content="{{@blog.url}}{{image}}">
@@ -37,7 +37,7 @@
                 <h1 class="post-title">{{{title}}}</h1>  
 
                 <div class="post-meta">
-                    <span class="author">By {{author}}</span>
+                    <span class="author">{{author}}</span>
                 </div>
 
                 <section class="post-content-output">{{content}}</section>
