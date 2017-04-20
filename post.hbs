@@ -1,8 +1,6 @@
 {{!< default}}
 
-{{! This is a post template. It displays a single post that the user selected from the home page template. }}
-    
-
+    {{! This is a post template. It displays a single post that the user selected from the home page template. }}
     {{! Everything inside the #post tags pulls data from the post }}
     {{#post}}
 
@@ -109,8 +107,7 @@
                 {{/if}}
 
                 <section class="comments">
-                    <button class="show-comments">Show Comments</button>
-                    <div id="disqus_thread"></div>
+                    <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="100" data-width="100%"></div>
                 </section>
 
             </section>
