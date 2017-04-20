@@ -1,0 +1,24 @@
+{{!< default}}
+
+<div class="no-image"></div>
+
+<div class="wrapper">
+    <section class="subscribe-content clearfix">
+        {{^if success}}
+            <h1>Never miss a post! Subscribe to our blog</h1>
+            <p>Get the latest posts delivered right to your inbox.</p>
+
+            {{subscribe_form
+                form_class="gh-signin clearfix"
+                input_class="gh-input"
+                button_class="btn btn-blue btn-block"
+                placeholder="email address"
+                autofocus="true"
+            }}
+        {{else}}
+            <h1>Subscribed!</h1>
+
+            <p>You've successfully subscribed to {{@blog.title}} with the email address <strong>{{email}}</strong>.</p>
+        {{/if}}
+    </section> <!-- .subscribe-content -->
+</div>

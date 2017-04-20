@@ -1,0 +1,281 @@
+@media screen and (max-width: 1170px){
+
+    /* Footer */
+
+    .site-footer{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    /* Posts */
+    .home-template,
+    .archive-template,
+    .author-template,
+    .tag-template{
+        .posts{
+            padding: 0 2%;
+        }
+    }
+
+    .home-template, 
+    .tag-template,
+    .paged,
+    .author-template{
+
+        .post{
+            width: 48.7%;
+
+            &:nth-child(even){
+                margin-right: 0%;
+            }
+
+            &:nth-child(odd){
+                margin-right: 2.5%;
+            }
+
+        }
+
+    }
+
+    .author-meta{
+        text-align: center;
+
+        .author-image-wrapper{
+            display: table;
+            margin: 0 auto;
+        }
+        .author-bio{
+            width: 100% !important;
+            margin-left: 0 !important;
+            margin-top: 10px;
+        }
+    }
+
+    /* Slider */
+    .slider-image{
+        .info{
+            padding: 0 2%;
+        }
+    }
+
+    /* Subscribe */
+
+    .subscribe{
+        text-align: center;
+
+        h3{
+            float: none;
+            margin-right: 0;
+        }
+
+        .form-group{
+            float: none;
+            display: inline-block;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 960px){
+
+    /* Posts */
+    .post-template,
+    .page-template{
+        main{
+            margin-top: 0px !important;
+        }
+
+        .post{
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 900px){
+
+    main{
+        width: 100%;
+        padding: 0;
+        margin: 0 0 30px 0;
+        border-right: none;
+        /*margin-top: 0px !important;*/
+    }
+
+    .site-header{
+        margin-bottom: 0;
+        padding: 0;
+
+        .nav{
+            display: none;
+        }
+
+        .menu-btn{
+            display: block;
+        }
+
+        .blog-title,
+        .blog-logo{
+            margin-left: 22px;
+        }
+    }
+
+
+
+    /* Posts */
+
+    .home-template, 
+    .tag-template,
+    .paged,
+    .author-template{
+
+        .post{
+            width: 100%;
+            min-height: 100%;
+            margin-right: 0px;
+        }
+
+        .featured-image{
+            height: 100%;
+            padding-top: 45%;
+        }
+    }
+
+    .overlay{
+        display: none;
+    }
+
+    /* Media */
+
+    .full-width{
+        margin: 30px -9.5%;
+    }
+
+    /* Image Slider */
+
+    .slider-image{
+        height: 500px;
+    }
+
+    .flex-direction-nav{
+        display: none;
+    }
+
+    .slider-no-touch{
+        -webkit-backface-visibility: visible !important;
+    }
+
+    /* Pagination */
+
+    .pagination{
+        margin-top: 40px;
+    }
+
+    /* Author Template & Tag Template */
+
+    .author-template, 
+    .tag-template{
+        h3{
+            padding: 0 5%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 750px){
+    .post-template .read-next .read-next-story, 
+    .page-template .read-next .read-next-story{
+        width: 100%;
+    }
+    
+    .post-template .read-next .read-next-story.prev,
+    .page-template .read-next .read-next-story.prev{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    main{
+        padding-top: 0;
+
+        h1{
+            font-size: 2.1em;
+        }
+
+        h2{
+            font-size: 1.5em;
+        }
+    }
+
+    /* Image Slider */
+
+    .slider-image{
+
+        height: 400px;
+
+        .info{
+            padding: 0 5%;
+        }
+
+        h2{
+            font-size: 2em;
+        }
+    }
+
+    /* Author Template & Tag Template */
+
+    .author-template,
+    .tag-template{
+        .cover-photo{
+            padding-top: 80%;
+            background-attachment: scroll;
+
+            /*h2{
+                margin: 0 5%;
+                font-size: 1.3em;
+            }*/
+        }
+    }
+
+    /* Posts */
+
+    .post-template .post-image, 
+    .page-template .post-image{
+        padding-top: 80%;
+    }
+
+    /* Footer */
+
+    .site-footer{
+        text-align: center;
+
+        .copyright,
+        .social-media{
+            width: 100%;
+
+        }
+
+    }
+
+    /* Subscribe */
+
+    .subscribe{
+        strong{
+            display: block;
+        }
+
+        .form-group{
+            margin-top: 10px;
+        }
+    }
+
+    .subscribe-content{
+        h1{
+            font-size: 1.8em;
+            line-height: 32px;
+        }
+    }
+
+}

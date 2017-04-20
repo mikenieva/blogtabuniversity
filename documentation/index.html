@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>documentation</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Alpha Documentation</h1>
+
+<p>Thanks for purchasing Alpha, a clean and modern theme for Ghost. Alpha was built for multi-user, featured posts and post cover images in mind.</p>
+
+<p>For more premium Ghost themes visit <a href="http://voltthemes.com/">VoltThemes.com</a> and <a href="https://twitter.com/VoltThemes">follow us on Twitter</a>!</p>
+
+<h2 id="toc_1">Table of Contents</h2>
+
+<ol>
+<li>Getting Started</li>
+<li>Installation</li>
+<li>Upgrading</li>
+<li>Settings</li>
+<li>Customization</li>
+<li>Support</li>
+<li>Version History</li>
+</ol>
+
+<h2 id="toc_2">1 . Getting Started</h2>
+
+<p>For the purposes of this documentation, it is assumed that you have Ghost up and running. If not, please visit <a href="http://support.ghost.org/">support.ghost.org</a> and follow the guide to install and configure Ghost.</p>
+
+<p>Please make sure you are running the <a href="https://ghost.org/developers/">latest version of Ghost</a> before installing &amp; using Alpha.</p>
+
+<h2 id="toc_3">2. Installation</h2>
+
+<ol>
+<li>Navigate to the directory on your server where Ghost is installed. </li>
+<li>Once there, navigate to the /content/themes/ directory.</li>
+<li>Upload the theme files to this directory.</li>
+<li>Restart Ghost.</li>
+<li>Log into your Ghost Admin.</li>
+<li>Navigate to Settings &gt; General and select Alpha in the theme options dropdown menu.</li>
+<li>Click &#39;Save&#39;.</li>
+</ol>
+
+<p><strong>Note:</strong> If you&#39;re on using Ghost(Pro), please <a href="http://support.ghost.org/upload-theme-ghostpro/">follow these instructions</a> on how to install a theme.</p>
+
+<h3 id="toc_4">Public API (Beta)</h3>
+
+<p>This theme uses the <a href="http://support.ghost.org/public-api-beta/">Public API feature</a> in Ghost, currently <strong>this feature is in beta</strong> and you will have to enable it in order to use all the theme features.</p>
+
+<ol>
+<li>Go to Settings &gt; Labs in the Ghost admin area.</li>
+<li>Scroll to the bottom of the page</li>
+<li>Under <strong>Enable Beta Features</strong>, tick the checkbox next to <strong>Public API</strong>.</li>
+</ol>
+
+<p>For more information check out the <a href="http://support.ghost.org/public-api-beta/">Ghost support page</a>.</p>
+
+<h2 id="toc_5">3. Upgrading</h2>
+
+<p>If you have made any changes to Alpha&#39;s template or SCSS/CSS files, you will need to re-integrate your custom theme changes.</p>
+
+<p><strong>Always perform a backup of the theme files before upgrading</strong></p>
+
+<ol>
+<li>Download the latest version of Alpha from your <a href="https://creativemarket.com/account/purchases">purchases page</a> on Creative Market.</li>
+<li>Navigate to the folder on your server where Ghost is installed.</li>
+<li>Once there, navigate to the /content/themes/ folder.</li>
+<li>Upload and replace all of the older theme files with the newer ones.</li>
+</ol>
+
+<p>Once you update your theme, you will want to restore your changes to the <code>theme-options.js</code> file.</p>
+
+<h2 id="toc_6">4. Settings</h2>
+
+<p>In Settings &gt; General several options will alter the content in Alpha:</p>
+
+<ul>
+<li><strong>Blog Logo</strong> - Appears as the first item the header. We recommend a <strong>maximum size</strong> of 240 × 30 pixels.</li>
+<li><strong>Blog Title</strong> - The blog title will be displayed if no blog logo has been uploaded.</li>
+<li><strong>Blog Description</strong> - Appears as your blog description in the search engines.</li>
+<li><strong>Blog Cover</strong> - This theme does not use or display the cover photo.</li>
+<li><strong>Posts per page</strong> - This is how many posts are displayed per page. We recommend setting this to an <strong>odd number</strong> for Alpha to display an equal number of items per page.</li>
+</ul>
+
+<h2 id="toc_7">5. Customization</h2>
+
+<p>If you&#39;re comfortable with HTML &amp; CSS, you can make any changes to the theme by editing Alpha&#39;s template files. </p>
+
+<p><strong>Please be aware that when Alpha is updated in the future, you will need to re-integrate your custom theme changes.</strong></p>
+
+<p>The CSS files were created using <a href="http://sass-lang.com/guide">SASS</a>. If you are familiar with SASS, you can easily customize Alpha.</p>
+
+<h4 id="toc_8">Using CSS</h4>
+
+<p>You can add your own custom CSS by <a href="http://support.ghost.org/use-code-injection/">using the Code Injection</a> feature in Ghost.</p>
+
+<p>If you have existing CSS in a <code>custom.css</code> stylesheet, you can cut &amp; paste your CSS into the <strong>Blog Header</strong> using <a href="http://support.ghost.org/use-code-injection/">Code Injection</a>. </p>
+
+<p><strong>Note:</strong> Don&#39;t forget to wrap your all your CSS in <code>&lt;style&gt;</code> tags.</p>
+
+<h4 id="toc_9">Using SASS</h4>
+
+<p>You will find the following SCSS files in /assets/scss/ directory:</p>
+
+<ul>
+<li><strong>screen.scss</strong> - This is the main CSS stylesheet. It imports the mixins.scss and variables.scss files.</li>
+<li><strong>mixins.scss</strong> - This contains all the CSS declarations that Alpha reuses throughout the theme.</li>
+<li><strong>variables.scss</strong> - This contains all the variables that you can tweak to customize the way Alpha looks.</li>
+<li><strong>normalize.scss</strong> - This contains Normalize.css, which is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.</li>
+</ul>
+
+<p><strong>Note</strong>: You will need a SASS preprocessor, such as <a href="http://gruntjs.com/">Grunt</a> to use the SCSS files.</p>
+
+<h4 id="toc_10">Navigation</h4>
+
+<p>You can customize the navigation menu by using the Navigation builder in your Ghost admin area.</p>
+
+<ol>
+<li>Click Settings in your Ghost admin area.</li>
+<li>Click Navigation from the menu on the left.</li>
+<li>Add, remove and/or reorder navigation items on the right.</li>
+<li>Click save.</li>
+</ol>
+
+<h4 id="toc_11">Social Media</h4>
+
+<h5 id="toc_12">Facebook &amp; Twitter</h5>
+
+<p>Add links to your blog&#39;s Facebook page &amp; Twitter profile in the Ghost admin area.</p>
+
+<ol>
+<li>Go to Settings &gt; General in your Ghost admin area.</li>
+<li>Add your links to the <code>Facebook Page</code> and <code>Twitter Profile</code> settings.</li>
+<li>Click save.</li>
+</ol>
+
+<h5 id="toc_13">Additional Social Media Networks</h5>
+
+<p>By default Ghost currently supports links to your blog&#39;s Facebook page &amp; Twitter profile.</p>
+
+<p>Add links to your blog&#39;s social media networks by editing the <code>theme-options.hbs</code> file located in the partials &gt; js folder.</p>
+
+<ol>
+<li>Navigate to the partials &gt; js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li>Find the Social Media section</li>
+<li><p>Add your social media links (between the quotation marks) to the corresponding social media variables.</p>
+
+<p><strong>Facebook Example:</strong></p>
+
+<div><pre><code class="language-none">var instagram_link = &quot;http://www.instagram.com/my_instagram_username&quot;;</code></pre></div></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials &gt; js folder.</p></li>
+</ol>
+
+<p><strong>Note:</strong> If you don&#39;t want a specific social media icon to appear, just leave variable blank.</p>
+
+<div><pre><code class="language-none">var instagram_link = &quot;&quot;;</code></pre></div>
+
+<p><strong>Note:</strong> If you wish to show RSS icon, change the <code>rss_link</code> value to <code>true</code>.</p>
+
+<div><pre><code class="language-none">var rss_link = true;</code></pre></div>
+
+<h4 id="toc_14">Favicon</h4>
+
+<p>You can add you own custom Favicon to your blog by replacing the <code>favicon.ico</code> file located in the assets directory:</p>
+
+<ol>
+<li>Navigate to the assets directory on your server.</li>
+<li>Replace the favicon.ico file with your own custom icon.</li>
+</ol>
+
+<h4 id="toc_15">Post Cover Images</h4>
+
+<p>You can add a post cover image to your posts by adding one in the post settings. This post cover image will be displayed along with the title of the post on the homepage and in the post itself.</p>
+
+<ol>
+<li>Login to the Ghost Admin area.</li>
+<li>Create or edit a post.</li>
+<li>Click the post settings icon, this is located next to the publish/update post button.</li>
+<li>Click &quot;Add post image.</li>
+<li>Save/update the post.</li>
+</ol>
+
+<h4 id="toc_16">Featured Posts</h4>
+
+<p>Any posts that you <a href="http://support.ghost.org/post-settings-overview/#set-post-as-featured">set as featured</a> will appear in the slider on the first page.</p>
+
+<h4 id="toc_17">Featured Post Slider</h4>
+
+<p>You can customize many options for the featured post slider by editing the <code>theme-options.js</code> file located in the assets &gt; js folder:</p>
+
+<ol>
+<li>Navigate to the partials &gt; js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li>Find the Featured Posts Slider section.</li>
+<li><p>Edit any of the following slider variables, below are the descriptions and options:</p>
+
+<p><strong>slider<em>auto</em>slide:</strong> Slide automatically, set as <code>true</code> or <code>false</code></p>
+
+<p><strong>slider_pagination:</strong> Display slider pagination, set as <code>true</code> or <code>false</code></p>
+
+<p><strong>slider_nav:</strong> Display slider navigation (the arrows), set as <code>true</code> or <code>false</code></p>
+
+<p><strong>slider<em>transition</em>speed:</strong> Speed of transition, in milliseconds (ex: <code>500</code>)</p>
+
+<p><strong>slider<em>image</em>timeout:</strong> Time between slide transitions, in milliseconds (ex: <code>7000</code>)</p>
+
+<p><strong>slider_pause:</strong> Pause on hover, set as <code>true</code> or <code>false</code></p>
+
+<p><strong>slider_keyboard:</strong> Control the slider using direction arrows (keyboard),  set as <code>true</code> or <code>false</code></p></li>
+</ol>
+
+<p><strong>This feature requires you to enable the Public API beta:</strong></p>
+
+<ol>
+<li>Go to Settings &gt; Labs in the Ghost admin area.</li>
+<li>Scroll to the bottom of the page</li>
+<li>Under <strong>Enable Beta Features</strong>, tick the checkbox next to <strong>Public API</strong>.</li>
+</ol>
+
+<h4 id="toc_18">Comments</h4>
+
+<p>You can enable Disqus comments on your blog by adding your <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname">Disqus shortname</a> to the <code>theme-options.js</code> file located in the assets &gt; js folder:</p>
+
+<ol>
+<li><a href="http://disqus.com/register">Add your site</a> to your Disqus account and setup a unique Disqus URL. The unique <strong>shortname</strong> you pick for your Disqus URL will be important to remember!</li>
+<li>Navigate to the assets &gt; js folder on your server.</li>
+<li><p>Open the <code>theme-options.js</code> file and add your unique <a href="https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname">shortname</a> to the <code>disqus</code> variable.</p>
+
+<p><strong>Example:</strong></p>
+
+<div><pre><code class="language-none">var disqus = &quot;DISQUS_SHORTNAME_HERE&quot;;</code></pre></div></li>
+<li><p>Save/update the <code>theme-options.js</code> file.</p></li>
+</ol>
+
+<p><strong>Note</strong>: If you don&#39;t want comments on your blog just leave the <code>disqus</code> variable blank.</p>
+
+<div><pre><code class="language-none">var disqus = &quot;&quot;; </code></pre></div>
+
+<h4 id="toc_19">Image Lightbox</h4>
+
+<p>By default Alpha will <strong>automatically</strong> add an image lightbox to all images within a post. You can disable the automatic image lightbox by editing the <code>theme-options.js</code> file located in the partials &gt; js folder.</p>
+
+<ol>
+<li>Navigate to the partials &gt; js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li><p>Find the <code>lightbox</code> variable and change the value from <code>true</code> to <code>false</code>.</p>
+
+<p><strong>Example:</strong></p>
+
+<div><pre><code class="language-none">var lightbox = false;</code></pre></div></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials &gt; js folder.</p></li>
+</ol>
+
+<p><strong>Note:</strong> If you wish to enable the automatic image lightbox again just change the <code>false</code> value to <code>true</code>.</p>
+
+<div><pre><code class="language-none">var lightbox = true;</code></pre></div>
+
+<h4 id="toc_20">Infinite Scroll</h4>
+
+<p>By default infinite scroll will be disabled. You can enable infinite scroll by editing the <code>theme-options.js</code> file located in the partials &gt; js folder.</p>
+
+<ol>
+<li>Navigate to the partials &gt; js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li><p>Find the <code>lightbox</code> variable and insert the text (between the quotation marks) <code>scroll</code> or <code>click</code>. Here are the differences between the two options:</p>
+
+<p><strong>Scroll will load new posts while scrolling:</strong></p>
+
+<div><pre><code class="language-none">var infinite_scroll = &quot;scroll&quot;;</code></pre></div>
+
+<p><strong>Click will load new posts with a click of a button:</strong></p>
+
+<div><pre><code class="language-none">var infinite_scroll = &quot;click&quot;;</code></pre></div></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials &gt; js folder.</p></li>
+</ol>
+
+<p><strong>Note:</strong> If you wish to disable infinite scroll just change the <code>infinite_scroll</code> variable blank.</p>
+
+<div><pre><code class="language-none">var infinite_scroll = &quot;&quot;;   </code></pre></div>
+
+<h4 id="toc_21">Post Title Limit</h4>
+
+<p>By default Alpha will limit the post titles to 92 characters on the home, author and tag pages. An elipsis will be  added to longer post titles. You can change this limit editing the <code>theme-options.js</code> file located in the partials &gt; js folder.</p>
+
+<ol>
+<li>Navigate to the partials &gt; js folder on your server.</li>
+<li>Open the <code>theme-options.js</code> file in your favorite text editor.</li>
+<li><p>Find the <code>post_title_limit</code> variable and change the value from <code>92</code> to another number.</p>
+
+<p><strong>Example:</strong></p>
+
+<div><pre><code class="language-none">var post_title_limit = &quot;100&quot;;</code></pre></div></li>
+<li><p>Upload the changed <code>theme-options.js</code> file to the partials &gt; js folder.</p></li>
+</ol>
+
+<p><strong>Note:</strong> If you wish to disable the post title limit just change the <code>post_title_limit</code> variable blank.</p>
+
+<div><pre><code class="language-none">var post_title_limit = &quot;&quot;;</code></pre></div>
+
+<h2 id="toc_22">6. Support</h2>
+
+<p>Support for this theme will be provided on Creative Market via this item&#39;s comments and via messages to the author.</p>
+
+<p>Support for my items includes:</p>
+
+<ul>
+<li>Responding to questions or problems regarding the item and its features</li>
+<li>Fixing bugs and reported issues</li>
+<li>Providing updates to ensure compatibility with new software versions</li>
+</ul>
+
+<p>Item support does not include:</p>
+
+<ul>
+<li>Customization and installation services</li>
+<li>Support for third party software and plug-ins</li>
+</ul>
+
+<h4 id="toc_23">Subscribers (Beta)</h4>
+
+<p>This theme uses the <a href="http://support.ghost.org/subscribers-beta/">Subscribers feature</a> in Ghost, currently <strong>this feature is in beta</strong> and you will have to enable it in order to use all the theme features.</p>
+
+<ol>
+<li>Go to Settings &gt; Labs in the Ghost admin area.</li>
+<li>Scroll to the bottom of the page</li>
+<li>Under <strong>Enable Beta Features</strong>, tick the checkbox next to <strong>Subscribers</strong>.</li>
+</ol>
+
+<p>For more information check out the <a href="http://support.ghost.org/subscribers-beta/">Ghost support page</a>.</p>
+
+<h2 id="toc_24">7. Version History</h2>
+
+<h4 id="toc_25">2016.12.12 - v2.0.0</h4>
+
+<ul>
+<li>Updated featured post slider to use the <a href="http://support.ghost.org/public-api-beta/">Public API beta</a>.</li>
+<li>Fixed font size issue with H3, H4 and H5 headings in posts.</li>
+</ul>
+
+<h4 id="toc_26">2016.05.28 - v1.2.0</h4>
+
+<ul>
+<li>Works with Ghost 0.8!</li>
+<li>Added support for the Subscribers (beta) feature.</li>
+<li>Added support for blog Facebook Page and Twitter Profiles via the Ghost admin.</li>
+<li>Added support for author Facebook Page and Twitter Profiles via the Ghost admin.</li>
+<li>Removed <code>facebook_link</code> and <code>twitter_link</code> variables from theme-options.js</li>
+<li>Split media queries into a separate SCSS file.</li>
+</ul>
+
+<h4 id="toc_27">2016.01.24 - v1.1.4</h4>
+
+<ul>
+<li>Added support for HTTPs blogs.</li>
+</ul>
+
+<h4 id="toc_28">2015.06.13 - v1.1.3</h4>
+
+<ul>
+<li>Conditionally <a href="http://dev.ghost.org/no-more-jquery/">load jQuery</a> if it doesn&#39;t exist already.</li>
+<li>Removed the <code>custom.css</code> stylesheet, users can use <a href="http://support.ghost.org/use-code-injection/">Code Injection</a> instead.</li>
+<li>Updated documentation to reflect changes.</li>
+</ul>
+
+<h4 id="toc_29">2015.05.15 - v1.1.2</h4>
+
+<ul>
+<li>Added previous/next post support.</li>
+<li>Fixed hover effect for the &quot;Show Comments&quot; button.</li>
+<li>Linked the author photo at the end of posts.</li>
+</ul>
+
+<h4 id="toc_30">2015.03.11 - v1.1.1</h4>
+
+<ul>
+<li>Bug fixes</li>
+</ul>
+
+<h4 id="toc_31">2015.02.28 - v1.1</h4>
+
+<ul>
+<li>Added navigation feature (new in Ghost 0.5.9).</li>
+<li>Added tag image &amp; description to the tag pages.</li>
+<li>Added <code>post_title_limit</code> variable to the theme-options.js file.</li>
+<li>Post titles on the home, tag and author page are now limited to 92 characters.</li>
+<li>Updated documentation for navigation &amp; post title limit.</li>
+<li>Fixed featured post slider will only appear on the home page.</li>
+</ul>
+
+<h4 id="toc_32">2015.01.2 - v1.0.1</h4>
+
+<ul>
+<li>Updated footer.</li>
+</ul>
+
+<h4 id="toc_33">2014.10.26 - v1.0</h4>
+
+<ul>
+<li>Initial Release.</li>
+</ul>
+
+
+
+
+</body>
+
+</html>
