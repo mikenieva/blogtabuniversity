@@ -31,29 +31,21 @@
 
                 {{#if tags}}<div class="post-tags">{{tags separator="  "}}</div>{{/if}} 
                 
-                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM D, YYYY"}}</time>
-
+                <time class="post-date" datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS\Z"}}">{{date format="DD - MM - YYYY"}}</time>
+                <br>
                 <h1 class="post-title">{{{title}}}</h1>
 
                 <div class="post-meta">
                     <span class="author">{{author}}</span>
                 </div>
-
+                <section class="share">
+                <div class="fb-share-button" data-href="{{url absolute="true"}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+                </section>
+                <br>
                 <section class="post-content-output">{{content}}</section>
 
                 <section class="share">
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                        <i class="icon-facebook"></i> <span class="text">Share</span>
-                    </a>
-                    <a class="twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                        <i class="icon-twitter"></i> <span class="text">Tweet</span>
-                    </a>
-                    <a class="google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                        <i class="icon-google-plus"></i> <span class="text">+1</span>
-                    </a>
+                    <div class="fb-share-button" data-href="{{url absolute="true"}}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
                 </section>
 
                 <section class="author-meta clearfix">
@@ -75,16 +67,19 @@
                             {{#if bio}}
                                 <p>{{bio}}</p>
                             {{/if}}
-                            <p><a href="{{url}}">See more posts from {{name}}</a></p>
+                            <p><a href="{{url}}">Conoce más de sus artículos.</a></p>
                         </div>
                     {{/author}}
                 </section>
+                
+                <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="100" data-width="100%"></div>
+
 
                 <section class="read-next clearfix">
                     {{#prev_post}}
                     <a class="read-next-story prev" href="{{url}}">
                         <section class="post">
-                            <h3>Previous Post</h3>
+                            <h3>También puede interesarte:</h3>
                             <h2>{{title}}</h2>
                         </section>
                     </a>
@@ -92,23 +87,13 @@
                     {{#next_post}}
                     <a class="read-next-story" href="{{url}}">
                         <section class="post">
-                            <h3>Next Post</h3>
+                            <h3>Conoce sobre:</h3>
                             <h2>{{title}}</h2>
                         </section>
                     </a>
                     {{/next_post}}
                 </section>
-
-                {{#if @labs.subscribers}}
-                <section class="subscribe clearfix">
-                    <h3><strong>Never miss a post!</strong> Subscribe to our blog:</h3>
-                    {{subscribe_form placeholder="email address"}}
-                </section>
-                {{/if}}
-
-                <section class="comments">
-                    <div class="fb-comments" data-href="{{url absolute="true"}}" data-numposts="100" data-width="100%"></div>
-                </section>
+                
 
             </section>
         </article>

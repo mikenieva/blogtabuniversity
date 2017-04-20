@@ -720,11 +720,14 @@ input[type='submit']{
 .post-content{
 
     p{
-        font-size: 1.2em;
+        font-size: 18px;
         line-height: 32px;
+        text-align: justify;
         margin-bottom: 30px;
     }
 }
+
+
 
 .post-excerpt{
     padding: 15px 15px 0 15px;
@@ -1281,6 +1284,82 @@ blockquote{
         font-weight: bold;
     }
 }
+
+
+#footer {
+    color: #ffffff;
+    padding: 7em 0 5em 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#footer > .inner {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#footer > .inner .icons {
+    -moz-order: 2;
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+    text-align: right;
+}
+
+#footer > .inner > * {
+    font-size: 0.8em;
+    width: 50%;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+}
+
+.icon {
+    text-decoration: none;
+    border-bottom: none;
+    position: relative;
+}
+
+#footer > .inner .contact {
+    -moz-order: 4;
+    -webkit-order: 4;
+    -ms-order: 4;
+    order: 4;
+    text-align: right;
+}
+
+#footer > .inner > * {
+    font-size: 0.8em;
+    width: 50%;
+}
+
+#footer .contact {
+    list-style: none;
+    padding: 0;
+}
+
+#footer .contact li {
+    display: inline-block;
+    padding: 0;
+}
+
+
 
 /* ==========================================================================
    Media Queries

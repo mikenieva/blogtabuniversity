@@ -19,18 +19,19 @@
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
         {{{block "meta"}}}
-
+        <script src="https://use.fontawesome.com/29f7d530b6.js"></script>
     </head>
     <body class="{{body_class}}">
-        
-<div id="fb-root"></div>
+
+        <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1157607614323376";
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=1157607614323376";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+
 
         <header class="site-header">
             {{> "header"}}                  
@@ -64,5 +65,24 @@
 
         <script src="{{asset "js/theme-options.js"}}"></script>
         <script src="{{asset "js/main.min.js"}}"></script>
+
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/es.js "></script>  
+        <script type="text/javascript">  
+        $(document).ready(function () {
+            moment.locale('es');
+
+            $('.post-date').each(function (i, date) {
+            var $date = $(date);
+
+            $date.html(
+            moment($date.attr('datetime'))
+            .format('LL')
+                        );
+                    });
+                });
+        </script>  
     </body>
 </html>
