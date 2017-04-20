@@ -7,7 +7,7 @@
     {{#post}}
 
         {{#contentFor "meta"}}
-            <meta property="og:title" content="{{title}} - {{author}}" />
+        {{#is "author"}}<meta property="og:title" content="{{title}} - {{#author}}{{name}}{{/author}}" />{{/is}}
             <meta property="og:site_name" content="{{@blog.title}}" />
             <meta property="og:description" content="{{meta_description}}"/>
             <meta property="og:image" content="{{@blog.url}}{{image}}">
@@ -34,7 +34,7 @@
                 
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="MMMM D, YYYY"}}</time>
 
-                <h1 class="post-title">{{{title}}}</h1>  
+                <h1 class="post-title">{{{title}}}</h1>
 
                 <div class="post-meta">
                     <span class="author">{{author}}</span>
